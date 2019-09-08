@@ -15,10 +15,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import org.bukkit.ChatColor;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
-import org.bukkit.Material;
+
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.block.Sign;
 import org.bukkit.entity.Arrow;
@@ -1027,6 +1025,7 @@ public class PlayerListener extends BaseListener {
     }
 
     if (game.getState() == GameState.RUNNING) {
+        p.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
       game.getCycle().onPlayerRespawn(pre, p);
       return;
     }

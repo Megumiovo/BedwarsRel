@@ -42,7 +42,7 @@ public class BlockListener extends BaseListener {
     grow.setCancelled(true);
   }
 
-  @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
+  @EventHandler(priority = EventPriority.HIGHEST)
   public void onBreak(BlockBreakEvent e) {
 
     Player p = e.getPlayer();

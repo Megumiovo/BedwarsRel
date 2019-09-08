@@ -250,7 +250,7 @@ scoreboard:
   # Possible placeholders:
   # - $status$ (bed status => destroyed/not destroyed)
   # - $team$ (Colored team name)
-  format-bed-destroyed: "&c$status$ $team$"
+  #format-bed-destroyed: "&c$status$ $team$"
   
   # Format for scoreboard teams (bed alive)
   # type: string
@@ -258,7 +258,7 @@ scoreboard:
   # Possible placeholders:
   # - $status$ (bed status => destroyed/not destroyed)
   # - $team$ (Colored team name)
-  format-bed-alive: "&a$status$ $team$"
+  #format-bed-alive: "&a$status$ $team$"
   
   # Format for scoreboard title
   # type: string
@@ -267,7 +267,23 @@ scoreboard:
   # - $game$ (game name)
   # - $region$ (game's region- or worldname)
   # - $time$ (the countdown-timer)
-  format-title: "&e$region$&f - $time$"
+  #format-title: "&e$region$&f - $time$"
+
+  format-title: "&e%map%&f - %time%"
+  format-bed-alive: "&a %team% &a%status% &8(&f&l%count%&8) %mark%"
+  format-bed-destroyed: "&a %team% &c%status% &8(&f&l%count%&8) %mark%"
+  format-mark: "&7(你)"
+  witherbow-enable: true
+  witherbow-mark: '&7已开启'
+  list:
+    - ' '
+    - '&3距离凋零弓开启:'
+    - '%witherbow%'
+    - ' '
+    - '%team_status%'
+    - ' '
+    - '&a击杀数: &f%kill%'
+    - '&a队伍击杀数: &f%team_kill%'
 
 # Titles configuration (only compatible with >= 1.8)
 titles:
